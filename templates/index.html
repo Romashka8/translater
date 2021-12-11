@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Переводчик</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/index.css">
+</head>
+<body>
+    <div class="toper">
+        <a href="https://github.com/Romashka8"><img src="static/icons/giticon.png" class="icon"></a>
+        <a href="https://m.vk.com/romashka_8888"><img src="static/icons/vkicon.png" class="icon"></a>
+        <a href="https://t.me/Romashka8888"><img src="static/icons/tg-icon.png" class="icon"></a>
+    </div>
+    <div class="container"></div>
+        <div class="content">
+            <form action="/translater" method="post">
+                <div class="button-area">
+                    <button type="submit">Перевести</button>
+                    <a href="/reset" class="reset-button">Очистить</a>
+                </div>
+                <div class="lang-select-container">
+                    <div class="lang-select1">
+                        <a href="/set_lang_from/ai">Английский</a>
+                        <a href="/set_lang_from/ru">Русский</a>
+                        <a href="/set_lang_from/ro">Румынский</a>
+                        <span class="lang-from">{{ lang_from }}</span>
+                    </div>
+                    <div class="lang-select2">
+                        <a href="/set_lang_to/ai">Английский</a>
+                        <a href="/set_lang_to/ru">Русский</a>
+                        <a href="/set_lang_to/ro">Румынский</a>
+                        <span class="lang-to">{{ lang_to }}</span>
+                    </div>
+                </div>
+                <div class="adapt-textarea">
+                    <textarea autofocus name="origin">
+                        {{ origin_text }}
+                    </textarea>
+                    <textarea name="translated">
+                        {{ translated_text }}
+                    </textarea>
+                </div>
+            </form>
+        </div>
+    </div>    
+</body>
+</html>
